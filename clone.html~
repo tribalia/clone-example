@@ -1,0 +1,67 @@
+sa testam clona
+<<<<<<< HEAD
+dan merge la piata
+=======
+ana are mere
+>>>>>>> 68f886b54a2354770c0d5d1b37333494a3d7388d
+
+dan@dan-desktop:~$ cd /home/dan/Desktop/lerning-git/clone-example 
+dan@dan-desktop:~/Desktop/lerning-git/clone-example$ git push origin master
+Username for 'https://github.com': tribalia
+Password for 'https://tribalia@github.com': 
+To https://github.com/tribalia/clone-example.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/tribalia/clone-example.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+dan@dan-desktop:~/Desktop/lerning-git/clone-example$ git pull
+U	clone.html
+Pull is not possible because you have unmerged files.
+Please, fix them up in the work tree, and then use 'git add/rm <file>'
+as appropriate to mark resolution, or use 'git commit -a'.
+dan@dan-desktop:~/Desktop/lerning-git/clone-example$ git commit -a
+[master 9d04e25] Merge branch 'master' of https://github.com/tribalia/clone-example
+dan@dan-desktop:~/Desktop/lerning-git/clone-example$ git commit -m 'faza 4'
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+	clone.html~
+
+nothing added to commit but untracked files present
+dan@dan-desktop:~/Desktop/lerning-git/clone-example$ git push
+warning: push.default is unset; its implicit value is changing in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the current behavior after the default changes, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+In Git 2.0, Git will default to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': tribalia
+Password for 'https://tribalia@github.com': 
+Counting objects: 10, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (6/6), 662 bytes | 0 bytes/s, done.
+Total 6 (delta 0), reused 0 (delta 0)
+To https://github.com/tribalia/clone-example.git
+   68f886b..9d04e25  master -> master
+dan@dan-desktop:~/Desktop/lerning-git/clone-example$ 
+
